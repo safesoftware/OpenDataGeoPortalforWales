@@ -1,6 +1,8 @@
 var map, toolbar, clippingGeometry;
 
 
+
+
 window.onload = function()
 {
     require([
