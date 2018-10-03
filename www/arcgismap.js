@@ -106,12 +106,14 @@ function showResults(json)
     // The following is to write out the full return object
     // for visualization of the example
     var hr = document.createElement("hr");
-    
+	var downloadarea = document.getElementById( "downloadarea" );
+    downloadarea.innerHTML = "<p>Processing Data...</p>";
 
     // This extracts the download link to the clipped data
     var download = json.serviceResponse.url;
 
 	var downloadarea = document.getElementById( "downloadarea" );
+	downloadarea.innerHTML = "";
     downloadarea.innerHTML += "<hr><a href=\"" + download + "\">Download Result</a>";
     
 }
@@ -123,6 +125,8 @@ function processClip()
 	var workspace = "WalesDataDistribution.fmw";
 	var params ="";
 	var form = document.getElementById( "output-form" );
+	var downloadarea = document.getElementById( "downloadarea" );
+    downloadarea.innerHTML = "<p>Processing Data...</p>";
 	
 	// Loop through unique parameters and build the parameter string
 	for( var i = 0; i < form.length; i++ ){
