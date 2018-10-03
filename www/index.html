@@ -1,0 +1,111 @@
+
+<html>
+
+<head>
+    <title>Open data Geo-Portal for Wales</title>
+    <!-- Styles for example -->
+    <link rel="stylesheet" href="https://playground.fmeserver.com/css/FMEServerExamples.css" type="text/css" />
+    <!-- Include FMEServer.js -->
+    <script type="text/javascript" src="https://api.fmeserver.com/js/v1.2/FMEServer.js"></script>
+    <!-- The following are Required for ArcGIS Maps -->
+    <link rel="stylesheet" href="https://js.arcgis.com/3.8/js/esri/css/esri.css" />
+    <script type="text/javascript" src="https://js.arcgis.com/3.8/"></script>
+    <!-- Connects to our JavaScript file -->
+    <script type="text/javascript" src="arcgismap.js"></script>
+	
+	
+</head>
+
+<body>
+   <div id="mapDiv"></div>
+   <div id="heading">
+    <h1> Open Data Geo-Portal for Wales </h1>
+    </div>
+	<div id="layerToggle">
+    <form id="exampleForm">
+        <h1>Step 1: Define your area of interest</h1>
+        <input id="draw" type="button" value="Draw" />
+        <input id="reset" type="button" value="Reset" /><br />
+        <div id="mapDiv"></div>
+		<div id="parameters">
+		<h1>Step 2: Set Parameters</h1>
+
+    
+    </form>
+	
+	
+	<form id="output-form"></form>
+	<div id="downloadarea"></div>
+	</div>
+</body>
+</br>
+</br>
+</br>
+
+<footer class="footer">
+      		<div class="container">
+        		<p class="text-muted">Powered by <a href="https://www.safe.com/">FME. <img src="libs/img/fme.png" class="fme" alt="FME"></a></p>
+      		</div>
+ </footer>
+
+</html>
+<style type="text/css">
+    #heading {
+        position: absolute;
+        text-align: center;
+        z-index: 99;
+        background-color: white;
+        border-radius: 4px;
+        margin: 0 auto;
+        max-width: 700px;
+        left: 500px;
+        top: 30px;
+        opacity: 0.90;
+    }
+
+   
+    #mapDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    #layerToggle {
+        bottom: 30px;
+        left: 20px;
+        position: absolute;
+        z-index: 99;
+        background-color: white;
+        border-radius: 4px;
+        padding: 15px;
+        opacity: 0.90;
+    }
+	footer { 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4rem; /* Set the fixed height of the footer here */
+  line-height: 4rem; /* Vertically center the text there */
+ }
+ footer a, a:hover {
+  color: inherit;
+  text-decoration: none;
+ }
+ .fme {
+  width:2rem;
+  height:2rem;
+ }
+ p {
+  font-family: inherit;
+  font-weight: 150;
+  line-height: 1.4rem;
+  color: inherit;
+  font-size: 1.1rem;
+}
+a {
+  font-size: 1.1rem;
+  font-weight: 150;
+  color:hsla(31, 96%, 51%, 0.7);
+}
+</style>
