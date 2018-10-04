@@ -116,7 +116,7 @@ function showResults(json) {
        }
        else {
         downloadarea.innerHTML = "";
-		 downloadarea.innerHTML += "No Features found in selected area. Please try again.";
+		 downloadarea.innerHTML += "No features found in selected area. Please try again.";
        }
      
      
