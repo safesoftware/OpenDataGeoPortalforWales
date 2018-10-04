@@ -138,7 +138,6 @@ function processClip() {
  var downloadarea = document.getElementById("downloadarea");
  var requestarea = document.getElementById("requestarea");
 
- requestarea.innerHTML = "<hr><b><p> Direct URL:</p></b>";
 
  downloadarea.innerHTML = "<p>Processing Data...</p>";
 

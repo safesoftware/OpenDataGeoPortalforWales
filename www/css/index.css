@@ -36,7 +36,21 @@ div#requestarea a:link {
   border-radius: 4px;
   padding: 15px;
   opacity: 0.90;
-  
+  max-width: 70%
+ 
+}
+#requestarea {
+  float: right;
+  bottom: 30px;
+  right: 20px;
+  position: absolute;
+  z-index: 99;
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+  opacity: 0.90;
+  max-width: 30%;
+ 
 }
 
 footer {
