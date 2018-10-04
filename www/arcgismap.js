@@ -104,11 +104,25 @@ function showResults(json) {
 
  // This extracts the download link to the clipped data
  var download = json.serviceResponse.url;
+ var numOutput = json.serviceResponse.fmeTransformationResult.fmeEngineResponse.numFeaturesOutput;
  console.log(json.serviceResponse);
 
  var downloadarea = document.getElementById("downloadarea");
- downloadarea.innerHTML = "";
- downloadarea.innerHTML += "<hr><a href=\"" + download + "\">Download Result</a>";
+ 
+
+ if (numOutput != 0){
+         downloadarea.innerHTML = "";
+		 downloadarea.innerHTML += "<hr><a href=\"" + download + "\">Download Result</a>";
+       }
+       else {
+        downloadarea.innerHTML = "";
+		 downloadarea.innerHTML += "No Features found in selected area. Please try again.";
+       }
+     
+     
+     
+ 
+ 
 
 
 
