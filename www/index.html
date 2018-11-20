@@ -14,36 +14,57 @@
 		<link rel="stylesheet" href="css/index.css">
 		</head>
 		<body>
-			<div id="mapDiv"></div>
+			<div id="mapDiv">
+			<img id="loadingImg" src="http://demos.fmeserver.com/easygeocoder/libs/upload/img/loading.gif" />
+			</div>
 			<div id="heading">
-				<h1> Open Data Geo-Portal for Wales </h1>
+			<h1> Open Data Geo-Portal for Wales </h1>
 			</div>
 			<div id="layerToggle">
-				<form id="exampleForm">
-					<h1>Step 1: Define your area of interest</h1>
-					<input id="draw" type="button" value="Draw" />
-					<input id="reset" type="button" value="Reset" />
-					<br />
-					<div id="mapDiv"></div>
-					<div id="parameters">
-						<h1>Step 2: Set Parameters</h1>
-					</form>
-					<form id="output-form"></form>
-					<div id="downloadarea"></div>
-					
-				</div>
-				
-				
-				
-				
+
+			<form id="exampleForm">
+			<h1>Step 1: Select the Data to View </h1>
+			<div id="viewingToggle">
+
+			
+	        <input type="checkbox" id="seacavesLyr" value="NRW_ART17_SEA_CAVE" name="FEATURE_TYPES" onclick="seaCaves();"> Sea Caves
+	        
+	        <input type="checkbox" id="estuariesLyr" value="NRW_ART17_ESTUARIES" name="FEATURE_TYPES" onclick="estuaries();"> Estuaries
+	        
+	        <input type="checkbox" id="floodmapLyr" value="NRW_HISTORIC_FLOODMAP" name="FEATURE_TYPES" onclick="floodmaps();"> Historic Floodmap
+	        
+	        <input type="checkbox" id="walescoastalpathLyr" value="NRW_WALES_COASTAL_PATH" name="FEATURE_TYPES" onclick="Coastalpath();"> Wales Coastal Path
+	        
+	        <input type="checkbox" id="marinecharacterLyr" value="NRW_MARINE_CHARACTER_AREAS" name="FEATURE_TYPES" onclick="marineChar();"> Marine Character Areas
+			
+	      
+
+
+			</div>
+			<h1>Step 2: Define your area of interest</h1>
+			<input id="draw" type="button" value="Draw" />
+			<input id="reset" type="button" value="Reset" />
+			<br/>
+			<div id="mapDiv"></div>
+			<div id="parameters">
+			<h1>Step 3: Set Parameters</h1>
+			</form>
+			<form id="output-form"></form>
+			<div id="downloadarea"></div>
+
+			</div>
+
+
+
+
 			</body>
-		
+
 	</br>
 </br>
 <footer class="footer">
 	<div class="container">
-		<p class="text-muted">Powered by 
-			<a href="https://www.safe.com/">FME. 
+		<p class="text-muted">Powered by
+			<a href="https://www.safe.com/">FME.
 				<img src="libs/img/fme.png" class="fme" alt="FME">
 				</a>
 			</p>
